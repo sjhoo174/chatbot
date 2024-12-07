@@ -1,0 +1,76 @@
+.login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #343541;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        color: #67ecb9;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    // .loading-bar {
+    //     background-color: #67ecb9; 
+    //     height: 100%;
+    //     transition: width;
+    //     transition-duration: 200ms;
+    // }
+
+    .loading-container {
+        position: relative;
+        background-color: #636579;
+        width: 70%;
+        height:0.3rem;
+        margin-top: 1rem;
+    }
+
+    .gmail {
+        position: relative;
+        width: 4rem;
+        height: 0.8rem;
+        margin-top: 0.2rem;
+        background-color: #67ecb9;
+        color: white;
+        font-size: 0.3rem;
+        font-family: sans-serif;
+        font-weight: 700;
+        border-radius: 0.15rem;
+        text-align: center;
+        transition: transform;
+        transition-duration: 200ms;
+        box-shadow: 0.5rem 0 1rem #535b62, -0.5rem 0 1rem #535b62;
+
+        &:hover {
+            filter: brightness(0.8);
+        }
+
+        &:active {
+            box-shadow: none;
+            filter: brightness(1);
+            transform: scale(1.1);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .spinner {
+            position: absolute;
+            width: 0.4rem;
+            height: 0.4rem;
+            right: 0.2rem;
+            top: 0.2rem;
+            border: 0.1rem solid #ffffff;
+            filter: brightness(1.2);
+            border-top: 0.1rem solid #29f057; /* Spinner color */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+    }
+}
